@@ -1,0 +1,14 @@
+<h1>Welcome to the fish aqueriume</h1>
+<div class="flex">
+    <div>
+        <h2>our fish list</h2>
+        <ul>
+            <li *ngFor="let f of fishSvc.fish"> {{ f.name }} </li>
+        </ul>
+    </div>
+
+
+    <div *ngIf="fishSvc.currentFish">
+        <app-fish-card></app-fish-card>
+    </div>
+</div>
